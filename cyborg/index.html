@@ -1,1 +1,80 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Cyborg Challenge — Charles Law</title><meta http-equiv="refresh" content="0;url=https://charleslaw.me/cyborg/"><link rel="canonical" href="https://charleslaw.me/cyborg/"></head><body><p><a href="https://charleslaw.me/cyborg/">Play Cyborg Challenge on charleslaw.me →</a></p></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#101719">
+  <title>Cyborg Challenge — Charles “Claw” Law | iamclaw.dev</title>
+  <meta name="description" content="Play Cyborg Challenge, Charles Law’s RapydScript puzzle game inspired by Chip’s Challenge, with keyboard input modeled on the Windows 3.1 original.">
+
+  <link rel="canonical" href="https://iamclaw.dev/cyborg/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Charles Law · iamclaw.dev">
+  <meta property="og:title" content="Cyborg Challenge — Charles “Claw” Law | iamclaw.dev">
+  <meta property="og:description" content="Play Cyborg Challenge, Charles Law’s RapydScript puzzle game inspired by Chip’s Challenge, with keyboard input modeled on the Windows 3.1 original.">
+  <meta property="og:url" content="https://iamclaw.dev/cyborg/">
+  <meta property="og:image" content="https://iamclaw.dev/assets/cyborg-challenge.png">
+  <meta property="og:image:alt" content="A level from Cyborg Challenge">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="/assets/montserrat-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/style.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoGame", "name": "Cyborg Challenge", "description": "Play Cyborg Challenge, Charles Law’s RapydScript puzzle game inspired by Chip’s Challenge, with keyboard input modeled on the Windows 3.1 original.", "url": "https://iamclaw.dev/cyborg/", "playMode": "SinglePlayer", "author": {"@type": "Person", "name": "Charles Law", "alternateName": "Claw", "url": "https://iamclaw.dev/"}}</script>
+  <link rel="stylesheet" href="/cyborg/themes/alertify.css">
+  <link rel="stylesheet" href="/cyborg/themes/alertify.default.css">
+  <link rel="stylesheet" href="/cyborg/cyborg.css">
+  <link rel="stylesheet" href="/cyborg/page.css">
+  <script src="/cyborg/alertify.min.js" defer></script>
+  <script src="/cyborg/rapyd.js" defer></script>
+  <script src="/cyborg/start.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="brand" href="/" aria-label="Charles Law, home"><span class="brand-symbol" aria-hidden="true">cl<span>.</span></span></a>
+    <nav aria-label="Main navigation"><a href="/projects/" aria-current="page">Projects</a><a href="/about/">About</a><a href="/contact/">Contact</a></nav>
+  </header>
+  <main id="main" class="wrap">
+    <header class="page-heading game-heading">
+      <a class="text-link" href="/projects/#cyborg-challenge"><span aria-hidden="true">←</span> Projects</a>
+      <h1>Cyborg Challenge<span class="accent">.</span></h1>
+      <p>A browser puzzle game inspired by Chip’s Challenge. The keyboard input behaves like the original Windows 3.1 game.</p>
+    </header>
+    <noscript><p>This game requires JavaScript. Enable it to load the board and keyboard controls.</p></noscript>
+    <section class="game-stage" aria-label="Cyborg Challenge game">
+      <div id="game">
+        <div id="display"><canvas id="myCanvas" width="700" height="500" tabindex="0" aria-label="Cyborg Challenge game board. Use the arrow keys to move; R restarts the level and P opens the password dialog.">Your browser needs canvas support to play this game.</canvas></div>
+        <div class="touch-controls" role="group" aria-label="On-screen movement controls">
+          <div class="direction-pad">
+            <button type="button" class="direction-button direction-up" data-key="ArrowUp" data-keycode="38" aria-label="Move up">↑</button>
+            <button type="button" class="direction-button direction-left" data-key="ArrowLeft" data-keycode="37" aria-label="Move left">←</button>
+            <button type="button" class="direction-button direction-down" data-key="ArrowDown" data-keycode="40" aria-label="Move down">↓</button>
+            <button type="button" class="direction-button direction-right" data-key="ArrowRight" data-keycode="39" aria-label="Move right">→</button>
+          </div>
+          <p>Press and hold to move.</p>
+        </div>
+        <div id="hud">
+          <div class="hudelem"><div class="chips">Chips left</div><div class="chips" id="count">000</div></div>
+          <div class="hudelem" aria-label="Collected equipment and keys">
+            <div class="huditems"><div class="hud"><div class="item" id="inv_flippers"></div></div><div class="hud"><div class="item" id="inv_fireboots"></div></div><div class="hud"><div class="item" id="inv_skates"></div></div><div class="hud"><div class="item" id="inv_suctionboots"></div></div></div>
+            <div class="huditems"><div class="hud"><div class="item" id="key_green"></div></div><div class="hud"><div class="item" id="key_yellow"></div></div><div class="hud"><div class="item" id="key_red"></div></div><div class="hud"><div class="item" id="key_blue"></div></div></div>
+          </div>
+          <div class="hudelem"><fieldset><legend>Messages</legend><div id="message"></div></fieldset></div>
+        </div>
+      </div>
+    </section>
+    <section class="game-notes" aria-labelledby="controls-title">
+      <h2 id="controls-title">Controls</h2>
+      <ul><li><kbd>←</kbd> <kbd>↑</kbd> <kbd>↓</kbd> <kbd>→</kbd> Move</li><li><kbd>R</kbd> Restart the current level</li><li><kbd>P</kbd> Enter a level password</li></ul>
+      <p>Use a keyboard, or the on-screen arrows on a phone or tablet.</p>
+      <p>Built with <a href="https://github.com/atsepkov/RapydScript">RapydScript</a>. <a href="https://github.com/charleslaw/cyborgchallenge">Game source on GitHub</a>.</p>
+      <p class="game-copyright">Original game © 2012 Charles Law.</p>
+    </section>
+  </main>
+  <footer class="site-footer wrap">
+    <p>© 2026 Charles “Claw” Law <span class="footer-domain">/ iamclaw.dev</span></p>
+    <nav aria-label="Social links"><a href="https://github.com/charleslaw">GitHub <span aria-hidden="true">↗</span></a><a href="https://www.linkedin.com/in/charleslaw1/">LinkedIn <span aria-hidden="true">↗</span></a><a href="/contact/">Contact <span aria-hidden="true">↗</span></a></nav>
+  </footer>
+</body>
+</html>

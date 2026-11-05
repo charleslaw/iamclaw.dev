@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#101719">
+  <title>Whiteboard Capture — Charles “Claw” Law | iamclaw.dev</title>
+  <meta name="description" content="Charles Law’s whiteboard capture projects: photo cleanup, vector output, marker-stroke recognition, and the interactive Jurassic Park example.">
+
+  <link rel="canonical" href="https://iamclaw.dev/projects/whiteboard/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Charles Law · iamclaw.dev">
+  <meta property="og:title" content="Whiteboard Capture — Charles “Claw” Law | iamclaw.dev">
+  <meta property="og:description" content="Charles Law’s whiteboard capture projects: photo cleanup, vector output, marker-stroke recognition, and the interactive Jurassic Park example.">
+  <meta property="og:url" content="https://iamclaw.dev/projects/whiteboard/">
+  <meta property="og:image" content="https://iamclaw.dev/assets/whiteboard-capture.jpg">
+  <meta property="og:image:alt" content="Whiteboard capture and image-cleanup example">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="/assets/montserrat-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/style.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "Whiteboard capture", "description": "Charles Law’s whiteboard capture projects: photo cleanup, vector output, marker-stroke recognition, and the interactive Jurassic Park example.", "url": "https://iamclaw.dev/projects/whiteboard/", "image": "https://iamclaw.dev/assets/whiteboard-capture.jpg", "author": {"@type": "Person", "@id": "https://iamclaw.dev/#charles", "name": "Charles Law", "alternateName": "Claw", "url": "https://iamclaw.dev/"}}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="brand" href="/" aria-label="Charles Law, home"><span class="brand-symbol" aria-hidden="true">cl<span>.</span></span></a>
+    <nav aria-label="Main navigation"><a href="/projects/" aria-current="page">Projects</a><a href="/about/">About</a><a href="/contact/">Contact</a></nav>
+  </header>
+  <main id="main" class="wrap">
+    <header class="page-heading whiteboard-heading">
+      <a class="text-link" href="/projects/#whiteboard"><span aria-hidden="true">←</span> Projects</a>
+      <p class="eyebrow">Computer vision · Image processing</p>
+      <h1>Whiteboard capture<span class="accent">.</span></h1>
+      <p>Two projects for cleaning up whiteboard photographs and recovering the original marker strokes.</p>
+    </header>
+    <article class="whiteboard-article">
+      <section class="whiteboard-section" aria-labelledby="background-title">
+        <h2 id="background-title">Background</h2>
+        <p>The goal was to make it easy to capture whiteboard drawings. I find that drawing digitally can get in the way of the flow of ideas: the tool can slow you down, or you can get distracted polishing what is on the screen. For many people, pen and paper or a whiteboard is the easiest way to brainstorm and be creative.</p>
+        <p>I had both projects close to production quality before my children were born, when I paused work on them. Around that period, Microsoft released Office Lens to address a similar problem.</p>
+      </section>
+      <section class="whiteboard-section" aria-labelledby="cleanup-title">
+        <h2 id="cleanup-title">Cleanup</h2>
+        <p>The first tool cleans up a whiteboard photograph. The original version followed a <a href="http://research.microsoft.com/en-us/um/people/zhang/Papers/TR03-39.pdf">Microsoft Research paper</a>. I subsequently rewrote every step using different techniques. The revised tool is equally fast and handles glare better.</p>
+        <p>The output can be a cleaned-up bitmap or a vector representation of the outline of each mark on the whiteboard.</p>
+        <div class="whiteboard-examples">
+          <figure>
+            <a href="/assets/whiteboard-capture.jpg" aria-label="Open the original whiteboard cleanup example"><img src="/assets/whiteboard-capture.jpg" alt="Whiteboard capture interface showing the photographed drawing and its cleaned-up version" width="512" height="289" loading="lazy"></a>
+            <figcaption>The original cleanup interface.</figcaption>
+          </figure>
+          <figure>
+            <a class="vector-example" href="/assets/whiteboard/vector-output.svg" aria-label="Open the full-size vector output"><img src="/assets/whiteboard/vector-output.svg" alt="Vectorized outlines of the handwriting and diagrams from a whiteboard photograph" width="1536" height="867" loading="lazy"></a>
+            <figcaption>Vector output. Open either image to inspect it at full size.</figcaption>
+          </figure>
+        </div>
+        <p class="reference-note">A later publication of the related research is available from Microsoft: <a href="https://www.microsoft.com/en-us/research/publication/whiteboard-scanning-image-enhancement/">Whiteboard Scanning and Image Enhancement</a>.</p>
+      </section>
+      <section class="whiteboard-section" aria-labelledby="recognition-title">
+        <h2 id="recognition-title">Recognition</h2>
+        <p>The second tool estimates the original marker strokes from an image. The Jurassic Park lettering below illustrates the difference between the outline of a mark and the path a pen would take to draw it.</p>
+        <figure class="stroke-demo">
+          <input class="stroke-toggle" type="checkbox" id="show-strokes" aria-describedby="stroke-instructions">
+          <label class="stroke-control" for="show-strokes">Show reconstructed marker strokes</label>
+          <div class="logo-stack">
+            <img src="/assets/whiteboard/jurassic-park-outline.svg" alt="Original Jurassic Park lettering used to demonstrate marker-stroke recognition" width="287" height="63" loading="lazy">
+            <img class="logo-strokes" src="/assets/whiteboard/jurassic-park-strokes.svg" alt="" aria-hidden="true" width="287" height="63" loading="lazy">
+          </div>
+          <figcaption id="stroke-instructions">Hover over the logo or select the checkbox to show the estimated strokes in red. The checkbox also works with touch and keyboard input.</figcaption>
+        </figure>
+        <p>Finding the outline of the letter “I” is relatively straightforward: it is the boundary of the white rectangle. But when someone writes an “I”, they draw a vertical <em>line</em>, not a rectangle. Recovering that line is what the recognition tool does.</p>
+        <p>The problem becomes harder at intersections. The “K” has several, and the outlines of neighboring letters can touch. The tool has to work out which paths correspond to the original strokes through those intersections.</p>
+      </section>
+      <section class="whiteboard-section" aria-labelledby="diagrams-title">
+        <h2 id="diagrams-title">From photographs to editable diagrams</h2>
+        <p>Once the original marker coordinates have been estimated, they resemble the coordinates produced by touch gestures. That makes it possible to use tools designed for touch input with a photograph.</p>
+        <p>I connected the stroke-recognition output to <a href="/projects/#grafpad">GrafPad</a>, a project I worked on that converts touch coordinates into shapes. With that combination, I converted a photograph of a whiteboard block diagram into a PowerPoint containing the same diagram as editable shapes.</p>
+        <p>The proof of concept worked, though it still needed more polishing.</p>
+      </section>
+      <p class="whiteboard-source">Images and examples from my <a href="https://charleslaw.me/projects/">original project write-up</a>.</p>
+    </article>
+  </main>
+  <footer class="site-footer wrap">
+    <p>© 2026 Charles “Claw” Law <span class="footer-domain">/ iamclaw.dev</span></p>
+    <nav aria-label="Social links"><a href="https://github.com/charleslaw">GitHub <span aria-hidden="true">↗</span></a><a href="https://www.linkedin.com/in/charleslaw1/">LinkedIn <span aria-hidden="true">↗</span></a><a href="/contact/">Contact <span aria-hidden="true">↗</span></a></nav>
+  </footer>
+</body>
+</html>

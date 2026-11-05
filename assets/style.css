@@ -131,11 +131,11 @@ figcaption{font-size:10px;letter-spacing:.02em;color:var(--muted);margin-top:14p
 .contact-layout{display:grid;grid-template-columns:1.6fr 1fr;gap:80px;padding-bottom:64px}
 .contact-row{border-top:1px solid var(--line);display:flex;gap:24px;padding:26px 0;align-items:center;text-decoration:none}
 .contact-row:last-child{border-bottom:1px solid var(--line)}
-.contact-row>span:last-child{margin-left:auto;color:var(--accent);font-size:25px}
+.contact-row>span[aria-hidden="true"]{margin-left:auto;color:var(--accent);font-size:25px}
 .contact-number{font-size:10px;color:var(--muted);align-self:start;margin-top:5px}
 .contact-row strong{display:block;font-size:20px;font-weight:400;letter-spacing:-.04em}
 .contact-row small{display:block;color:var(--muted);font-size:11px;margin-top:4px}
-.contact-row:hover strong{color:var(--accent)}
+a.contact-row:hover strong{color:var(--accent)}
 .contact-note{align-self:start;background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:26px}
 .note-symbol{font-size:30px;line-height:1;color:var(--accent)}
 .contact-note h2{font-size:20px;margin:22px 0 15px}
@@ -150,3 +150,29 @@ figcaption{font-size:10px;letter-spacing:.02em;color:var(--muted);margin-top:14p
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.grafpad-image img{display:none}.grafpad-image:before{content:'GrafPad’s original animated demo is available on charleslaw.me/projects/.';display:block;padding:32px;font-size:12px;color:var(--muted)}}
 
 .project-text-only{grid-template-columns:1fr}.project-text-only .project-detail-copy{max-width:680px}.contact-note h2:first-child{margin-top:0}.career-section{margin-bottom:55px}
+.project-title-link{text-decoration:none}
+.project-title-link:hover{text-decoration:underline}
+.whiteboard-heading>.text-link{margin-bottom:20px}
+.whiteboard-article{max-width:900px;margin-bottom:70px}
+.whiteboard-section{padding:32px 0 10px;border-top:1px solid var(--line);margin-bottom:24px}
+.whiteboard-section h2{font-size:1.7rem;margin-bottom:22px}
+.whiteboard-section>p{max-width:780px;font-size:14px;line-height:1.95;margin-bottom:20px}
+.whiteboard-section p a,.whiteboard-source a{color:var(--text)}
+.whiteboard-examples{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin:28px 0}
+.whiteboard-examples figure{min-width:0}
+.whiteboard-examples figure>a{display:block;background:#fff;border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.whiteboard-examples img{width:100%;aspect-ratio:512/289;object-fit:contain}
+.whiteboard-examples figcaption{margin-top:12px}
+.whiteboard-section>.reference-note{font-size:11px;color:var(--muted)}
+.stroke-demo{padding:24px 28px;border:1px solid var(--line);background:var(--panel);border-radius:4px;margin:28px 0}
+.stroke-toggle{accent-color:var(--accent);width:17px;height:17px;vertical-align:middle;margin:0 7px 0 0;cursor:pointer}
+.stroke-toggle:focus-visible{outline:2px solid var(--accent);outline-offset:5px}
+.stroke-control{display:inline-block;padding:10px 0;font-size:12px;cursor:pointer;vertical-align:middle}
+.logo-stack{position:relative;background:#fff;border-radius:3px;padding:22px;margin-top:16px}
+.logo-stack img{width:100%;height:auto}
+.logo-stack .logo-strokes{position:absolute;left:22px;top:22px;width:calc(100% - 44px);height:calc(100% - 44px);opacity:0}
+.stroke-toggle:checked~.logo-stack .logo-strokes{opacity:1}
+.stroke-demo figcaption{font-size:11px;margin-top:18px;max-width:720px}
+.whiteboard-source{font-size:11px;border-top:1px solid var(--line);padding-top:24px}
+@media(hover:hover){.logo-stack:hover .logo-strokes{opacity:1}}
+@media(max-width:700px){.whiteboard-heading{padding-bottom:30px}.whiteboard-heading h1{font-size:2.5rem}.whiteboard-section{padding-top:26px}.whiteboard-section h2{font-size:1.45rem}.whiteboard-section>p{font-size:13px}.whiteboard-examples{grid-template-columns:1fr;gap:24px}.stroke-demo{padding:16px}.stroke-control{font-size:10px}.logo-stack{padding:12px}.logo-stack .logo-strokes{top:12px;left:12px;width:calc(100% - 24px);height:calc(100% - 24px)}.stroke-demo figcaption{font-size:10px}.whiteboard-article{margin-bottom:45px}}

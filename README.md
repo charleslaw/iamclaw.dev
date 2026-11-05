@@ -18,15 +18,16 @@ Open http://127.0.0.1:4173. Stop with Ctrl-C.
 - `index.html`: homepage.
 - `about/index.html`: bio and career background.
 - `projects/index.html`: MedArmor and the original personal projects.
+- `projects/whiteboard/index.html`: the full whiteboard capture write-up and interactive stroke-recognition example.
 - `contact/index.html`: LinkedIn, GitHub, and email.
 - `assets/style.css`: colors, typography, spacing, and mobile layouts.
-- `docs/bio-review.md`: draft copy and decisions for Charles before launch.
+- `docs/bio-review.md`: bio copy and editorial notes for future revisions.
 
 Each page contains its final HTML, metadata, and navigation. Update shared navigation/footer and SEO details in all pages if they change. Update `sitemap.xml` when adding a page. `.nojekyll` makes Pages serve the files directly.
 
-Portrait framing is controlled by `.portrait-frame img` in CSS; the supplied face has not been regenerated or retouched. The JPEG is a smaller, compressed copy with its metadata removed. The homepage portrait is about 125 KB, and both Montserrat weights are hosted locally. No JavaScript runtime, trackers, external font service, or contact-form backend is required. Core content and navigation work with JavaScript disabled.
+Portrait framing is controlled by `.portrait-frame img` in CSS; the supplied face has not been regenerated or retouched. The JPEG is a smaller, compressed copy with its metadata removed. The homepage portrait is about 125 KB, and both Montserrat weights are hosted locally. The main pages need no JavaScript, trackers, external font service, or contact-form backend. The Jurassic Park stroke overlay uses CSS for hover and a checkbox for touch and keyboard control. Core site content and navigation work with JavaScript disabled; the optional game requires JavaScript.
 
-The original Cyborg Challenge stays at https://charleslaw.me/cyborg/ and is linked from Home and Projects. `/cyborg/` also redirects there. Keep the old game hosting active.
+Cyborg Challenge is hosted locally at `/cyborg/` and linked from Home and Projects. The original game engine, level data, sprites, and Alertify library are included locally; the game runs JavaScript only on its own page. The original keyboard-input behavior is preserved. Mobile arrow buttons send the same keydown/keyup events, with pointer capture and release handling for press-and-hold movement.
 
 ## GitHub Pages
 
@@ -38,7 +39,7 @@ Use the public repository `charleslaw/iamclaw.dev`.
 4. Configure Namecheap DNS using [the deployment notes](docs/deployment.md).
 5. Once GitHub’s certificate is issued, enable **Enforce HTTPS**. The `.dev` domain requires HTTPS.
 
-Review the draft bio before enabling Pages. The public site is intentionally separate from the local resume and cover-letter source materials.
+The site is published from the `main` branch when Pages is enabled. Bio copy remains editable; private resume and cover-letter source documents are not included in this repository.
 
 ## Verification
 

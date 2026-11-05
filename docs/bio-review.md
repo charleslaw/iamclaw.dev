@@ -1,6 +1,6 @@
 # Bio draft for Charles to review
 
-Status: working draft. The About page and homepage wording need Charles’s review before launch. The direction is a mix of professional background and personal motivation, as requested.
+Status: current site copy, open to further revisions. Charles authorized GitHub Pages setup on November 4, 2026. The direction is a mix of professional background and personal motivation, as requested.
 
 ## Homepage
 

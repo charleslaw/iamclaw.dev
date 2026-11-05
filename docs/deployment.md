@@ -2,6 +2,15 @@
 
 Target: public repository **charleslaw/iamclaw.dev**, main branch, root folder. Custom domain: **iamclaw.dev**.
 
+## Current setup
+
+- Repository: [charleslaw/iamclaw.dev](https://github.com/charleslaw/iamclaw.dev).
+- GitHub Pages: **Deploy from a branch → main → / (root)**.
+- Custom domain: **iamclaw.dev**.
+- [First build and deployment succeeded](https://github.com/charleslaw/iamclaw.dev/actions/runs/41980320820).
+- Namecheap DNS still needs the website records below. At setup time, the apex resolved to `192.64.119.136` and `www` pointed to `parkingpage.namecheap.com`.
+- Enable **Enforce HTTPS** in [Pages settings](https://github.com/charleslaw/iamclaw.dev/settings/pages) after DNS validates and GitHub issues the certificate.
+
 ## Launch order
 
 1. Push the `main` branch to GitHub.

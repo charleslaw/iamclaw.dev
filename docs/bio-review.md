@@ -8,13 +8,13 @@ Status: working draft. The About page and homepage wording need Charles’s revi
 
 **Headline:** Turning research into useful products.
 
-**Supporting copy:** I work between engineering and research, building tools that give people time and energy back.
+**Supporting copy:** I work between engineering and research. My background includes production AI, healthcare software, distributed systems, and signal processing.
 
 ## About
 
 I’m a software engineer in Los Angeles with a background in electrical and systems engineering. Over the past two decades, I’ve worked on radar algorithms, distributed data platforms, and AI systems used in healthcare.
 
-I work between engineering and research: understanding a hard problem, turning an idea into working software, and staying close to the people who depend on it. The most satisfying part is turning a technical possibility into a tool that makes someone’s day easier.
+I work between engineering and research, taking ideas from experimentation into production. I enjoy working with researchers and users to understand a problem, build a solution, and improve it based on how it is used.
 
 At Eyenuk, my work has spanned production software, clinical review tools, data quality, and the systems that bring AI into real clinical workflows. That means working with researchers, clinicians, customers, and engineers — and making their feedback part of the product.
 

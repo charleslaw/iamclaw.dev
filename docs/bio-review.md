@@ -12,7 +12,7 @@ Status: working draft. The About page and homepage wording need Charles’s revi
 
 ## About
 
-I’m Charles Law — Claw for short — a software engineer in Los Angeles with a background in electrical and systems engineering. Over the past two decades, I’ve worked on radar algorithms, distributed data platforms, and AI systems used in healthcare.
+I’m a software engineer in Los Angeles with a background in electrical and systems engineering. Over the past two decades, I’ve worked on radar algorithms, distributed data platforms, and AI systems used in healthcare.
 
 I work between engineering and research: understanding a hard problem, turning an idea into working software, and staying close to the people who depend on it. The most satisfying part is turning a technical possibility into a tool that makes someone’s day easier.
 

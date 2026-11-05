@@ -1,6 +1,6 @@
 # GitHub Pages + Namecheap
 
-Target: public repository **charleslaw/iamclawweb**, main branch, root folder. Custom domain: **iamclaw.dev**.
+Target: public repository **charleslaw/iamclaw.dev**, main branch, root folder. Custom domain: **iamclaw.dev**.
 
 ## Launch order
 

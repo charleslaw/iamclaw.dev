@@ -30,7 +30,7 @@ The original Cyborg Challenge stays at https://charleslaw.me/cyborg/ and is link
 
 ## GitHub Pages
 
-Use the public repository `charleslaw/iamclawweb`.
+Use the public repository `charleslaw/iamclaw.dev`.
 
 1. Push the `main` branch.
 2. In **Settings → Pages → Build and deployment**, choose **Deploy from a branch**, branch **main**, folder **/ (root)**, and Save.

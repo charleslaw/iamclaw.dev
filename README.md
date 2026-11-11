@@ -18,7 +18,7 @@ Open http://127.0.0.1:4173. Stop with Ctrl-C.
 - `index.html`: homepage.
 - `about/index.html`: personal introduction.
 - `experience/index.html`: professional background and work history.
-- `projects/index.html`: Glimpse, MedArmor, and independent projects.
+- `projects/index.html`: MedArmor, Glimpse, and independent projects.
 - `projects/whiteboard/index.html`: the full whiteboard capture write-up and interactive stroke-recognition example.
 - `contact/index.html`: LinkedIn, GitHub, and email.
 - `assets/style.css`: base layout and component styles.

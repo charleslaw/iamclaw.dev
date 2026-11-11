@@ -16,16 +16,18 @@ Open http://127.0.0.1:4173. Stop with Ctrl-C.
 ## Edit
 
 - `index.html`: homepage.
-- `about/index.html`: bio and career background.
-- `projects/index.html`: MedArmor and the original personal projects.
+- `about/index.html`: personal introduction.
+- `experience/index.html`: professional background and work history.
+- `projects/index.html`: Glimpse, MedArmor, and independent projects.
 - `projects/whiteboard/index.html`: the full whiteboard capture write-up and interactive stroke-recognition example.
 - `contact/index.html`: LinkedIn, GitHub, and email.
-- `assets/style.css`: colors, typography, spacing, and mobile layouts.
+- `assets/style.css`: base layout and component styles.
+- `assets/playful.css`: shared dark palette, system fonts, buttons, and responsive typography.
 - `docs/bio-review.md`: bio copy and editorial notes for future revisions.
 
 Each page contains its final HTML, metadata, and navigation. Update shared navigation/footer and SEO details in all pages if they change. Update `sitemap.xml` when adding a page. `.nojekyll` makes Pages serve the files directly.
 
-Portrait framing is controlled by `.portrait-frame img` in CSS; the supplied face has not been regenerated or retouched. The JPEG is a smaller, compressed copy with its metadata removed. The homepage portrait is about 125 KB, and both Montserrat weights are hosted locally. The main pages need no JavaScript, trackers, external font service, or contact-form backend. The Jurassic Park stroke overlay uses CSS for hover and a checkbox for touch and keyboard control. Core site content and navigation work with JavaScript disabled; the optional game requires JavaScript.
+Portrait framing is controlled by `.portrait-frame img` in CSS; the supplied face has not been regenerated or retouched. The JPEG is a smaller, compressed copy with its metadata removed. The homepage portrait is about 125 KB, and the design uses system fonts without font downloads. The main pages need no JavaScript, trackers, external font service, or contact-form backend. The Jurassic Park stroke overlay uses CSS for hover and a checkbox for touch and keyboard control. Core site content and navigation work with JavaScript disabled; the optional game requires JavaScript.
 
 Cyborg Challenge is hosted locally at `/cyborg/` and linked from Home and Projects. The original game engine, level data, sprites, and Alertify library are included locally; the game runs JavaScript only on its own page. The original keyboard-input behavior is preserved. Mobile arrow buttons send the same keydown/keyup events, with pointer capture and release handling for press-and-hold movement.
 

@@ -21,3 +21,16 @@
 .direction-up{grid-column:2;grid-row:1}.direction-left{grid-column:1;grid-row:2}.direction-down{grid-column:2;grid-row:2}.direction-right{grid-column:3;grid-row:2}
 .touch-controls p{font-size:10px;margin-top:8px}
 @media(max-width:760px),(pointer:coarse){.touch-controls{display:grid;justify-items:center}}
+
+/* Match the surrounding site without changing the game canvas or controls. */
+.game-stage{border:2px solid #7f6b9f;border-radius:16px;background:#222535}
+.game-stage fieldset{border-radius:8px;font-size:14px}
+.game-stage #message{font-size:14px}
+.game-stage .chips{font-size:16px}
+.game-notes h2{font-size:28px}
+.game-notes ul,.game-notes p{font-size:15px;line-height:1.9}
+.game-notes li{margin-block:10px}
+.game-notes kbd{font-size:14px;border-radius:5px}
+.game-notes .game-copyright{font-size:12px}
+.touch-controls p{font-size:13px}
+.direction-button{border-color:#7f6b9f;border-radius:10px}
